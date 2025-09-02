@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Career Coach — Interview Prep (Demo)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-[Inter] bg-gradient-to-br from-slate-900 via-violet-900 to-fuchsia-900 text-white min-h-screen">
+  <div class="w-full bg-amber-400/90 text-black text-xs md:text-sm text-center py-1">Demo UI only — No backend</div>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/5 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white/10 shadow">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"/></svg>
+        </span>
+        <div>
+          <p class="font-semibold tracking-wide">AI Career Coach</p>
+          <p class="text-[11px] text-white/70 -mt-0.5">Interview Prep</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-2 text-sm">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="roadmap.html" class="nav-link">Roadmap</a>
+        <a href="interview.html" class="nav-link active">Interview Prep</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-8">
+    <section class="grid lg:grid-cols-3 gap-6">
+      <div class="card lg:col-span-2 p-5">
+        <div class="flex items-center justify-between">
+          <h2 class="section-title">Mock Q&A</h2>
+          <span class="pill">practice (disabled)</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mt-4">
+          <!-- Q card -->
+          <div class="qa-card">
+            <h4 class="qa-q">Q: Explain CSS Flexbox vs Grid?</h4>
+            <p class="qa-a">A: Flexbox is one-dimensional (row/column), Grid is two-dimensional (rows & columns). Use Flex for alignment; Grid for full layouts.</p>
+            <button disabled class="btn-disabled w-full">Record Answer</button>
+          </div>
+          <div class="qa-card">
+            <h4 class="qa-q">Q: What are React hooks?</h4>
+            <p class="qa-a">A: Functions like useState/useEffect for state & side-effects in functional components.</p>
+            <button disabled class="btn-disabled w-full">Record Answer</button>
+          </div>
+          <div class="qa-card">
+            <h4 class="qa-q">Q: Debouncing vs Throttling?</h4>
+            <p class="qa-a">A: Debounce waits for pause; Throttle limits calls in an interval.</p>
+            <button disabled class="btn-disabled w-full">Record Answer</button>
+          </div>
+          <div class="qa-card">
+            <h4 class="qa-q">Q: HTTP vs HTTPS?</h4>
+            <p class="qa-a">A: HTTPS encrypts data via TLS/SSL, ensuring confidentiality & integrity.</p>
+            <button disabled class="btn-disabled w-full">Record Answer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-5">
+        <h2 class="section-title">Practice Progress</h2>
+        <p class="section-sub">Dummy chart</p>
+        <canvas id="prepChart" height="220"></canvas>
+      </div>
+    </section>
+
+    <section class="card p-5">
+      <h2 class="section-title">Feedback (Sample)</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-3">
+        <div class="feedback">Clear explanations; improve examples.</div>
+        <div class="feedback">Slow down; avoid filler words.</div>
+        <div class="feedback">Great structure; quantify results.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-white/70 flex items-center justify-between">
+      <p>© <span id="year"></span> AI Career Coach (Demo)</p>
+      <a href="index.html" class="btn-muted">Back to Dashboard</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Career Coach — Roadmap (Demo)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-[Inter] bg-gradient-to-br from-slate-900 via-violet-900 to-fuchsia-900 text-white min-h-screen">
+  <div class="w-full bg-amber-400/90 text-black text-xs md:text-sm text-center py-1">Demo UI only — No backend</div>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/5 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-white/10 shadow">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"/></svg>
+        </span>
+        <div>
+          <p class="font-semibold tracking-wide">AI Career Coach</p>
+          <p class="text-[11px] text-white/70 -mt-0.5">Roadmap</p>
+        </div>
+      </a>
+      <nav class="flex items-center gap-2 text-sm">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="roadmap.html" class="nav-link active">Roadmap</a>
+        <a href="interview.html" class="nav-link">Interview Prep</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-8">
+    <section class="grid lg:grid-cols-3 gap-6">
+      <div class="card lg:col-span-2 p-5">
+        <h2 class="section-title">Career Roadmap</h2>
+        <p class="section-sub">Timeline with dummy milestones</p>
+
+        <!-- timeline -->
+        <ol class="relative border-s border-white/10 ml-3 mt-4">
+          <li class="mb-10 ms-4">
+            <div class="timeline-dot"></div>
+            <time class="timeline-time">Week 1</time>
+            <h3 class="timeline-title">HTML, CSS fundamentals</h3>
+            <p class="timeline-text">Build 2 static pages, learn flex/grid.</p>
+          </li>
+          <li class="mb-10 ms-4">
+            <div class="timeline-dot"></div>
+            <time class="timeline-time">Week 2</time>
+            <h3 class="timeline-title">JavaScript basics</h3>
+            <p class="timeline-text">DOM, events, fetch (demo only).</p>
+          </li>
+          <li class="mb-10 ms-4">
+            <div class="timeline-dot"></div>
+            <time class="timeline-time">Week 3</time>
+            <h3 class="timeline-title">React + Components</h3>
+            <p class="timeline-text">Make reusable UI elements.</p>
+          </li>
+          <li class="mb-4 ms-4">
+            <div class="timeline-dot"></div>
+            <time class="timeline-time">Week 4</time>
+            <h3 class="timeline-title">Projects + Interview Prep</h3>
+            <p class="timeline-text">Mini project & mock interviews.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card p-5">
+        <h2 class="section-title">Skill Progress</h2>
+        <p class="section-sub">Dummy chart (UI only)</p>
+        <canvas id="skillsChart" height="220"></canvas>
+      </div>
+    </section>
+
+    <section class="card p-5">
+      <div class="flex items-center justify-between">
+        <h2 class="section-title">Weekly Goals</h2>
+        <span class="pill">read-only</span>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4 mt-4">
+        <div class="goal">
+          <h4 class="font-semibold">Practice HTML/CSS</h4>
+          <p class="text-sm text-white/80">2 layouts • responsive</p>
+          <button disabled class="btn-disabled">Mark done</button>
+        </div>
+        <div class="goal">
+          <h4 class="font-semibold">JS Exercises</h4>
+          <p class="text-sm text-white/80">arrays • loops • DOM</p>
+          <button disabled class="btn-disabled">Mark done</button>
+        </div>
+        <div class="goal">
+          <h4 class="font-semibold">Portfolio polish</h4>
+          <p class="text-sm text-white/80">cards • animations</p>
+          <button disabled class="btn-disabled">Mark done</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-6 text-sm text-white/70 flex items-center justify-between">
+      <p>© <span id="year"></span> AI Career Coach (Demo)</p>
+      <a href="index.html" class="btn-muted">Back to Dashboard</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
